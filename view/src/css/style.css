@@ -1,0 +1,490 @@
+/*================= common styles ==========================================*/
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+}
+h1 {
+  font-family: "Playfair Display", serif;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 40px;
+  text-shadow: 1px 1px 7px rgb(83, 83, 83);
+  text-align: center;
+  text-transform: capitalize;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 25px;
+}
+p,
+a,
+li,
+span {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+}
+.main {
+  min-height: 100vh;
+}
+.underline {
+  border-bottom: #979797 0.5px solid;
+}
+.primary {
+  background: #979797;
+}
+
+.header {
+  padding: 90px 30px 2% 2%;
+  display: block;
+}
+.headings {
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px grey;
+  text-align: center;
+}
+.price {
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(2, 43, 2);
+  background: rgb(151, 236, 151);
+}
+.informations {
+  padding-left: 7px;
+  margin-top: -3px;
+  position: relative;
+  top: -6px;
+}
+.file-input {
+  display: inline;
+}
+.checkbox {
+  display: inline;
+  padding-right: 15px;
+}
+select {
+  display: inherit;
+}
+.pagination li.active a {
+  color: #fff;
+  background: black;
+  border: none;
+}
+.submit {
+  margin: 10px 0px;
+}
+.message-board {
+  background: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #d1cccc;
+  height: 60vh;
+  overflow: auto;
+  margin-top: 30px;
+  margin-bottom: 3px;
+}
+.styles_modal__gNwvD {
+  z-index: 9999999;
+  width: 350px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  margin-top: 120px;
+}
+.login_toggle {
+  text-decoration: underline;
+  color: #3f3ffb;
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  margin: 15px;
+}
+
+.description_textarea {
+  height: 180px;
+}
+.not-found {
+  text-align: center;
+}
+.middle {
+  margin-left: 35%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 30%;
+}
+
+img.responsive-img,
+video.responsive-video {
+  width: 100% !important;
+}
+
+/* 5 */
+/*================= header styles ==========================================*/
+.header-name {
+  position: relative;
+  display: inline;
+  top: -51px;
+  left: 56px;
+}
+.header-menu-item {
+  display: block;
+  padding-left: 5px;
+  color: #ffffff;
+  font-weight: 300;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.86);
+}
+.header-menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  color: black;
+}
+.header-label {
+  font-size: 1rem;
+  color: #ffffff;
+  position: relative;
+  top: -2px;
+  left: 8px;
+}
+#header-logo {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  color: #c3c3c3;
+}
+#header-login {
+  height: 20px;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+#header-user {
+  height: 62px;
+  padding-left: 2px;
+  padding-top: 2px;
+  color: #979797;
+}
+#header-profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 35px;
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 22px;
+  height: 22px;
+  left: 20px;
+  top: 20px;
+  z-index: 999 !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #ffffff;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  background: white;
+  border-radius: 14px;
+}
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #212121;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: rgba(0, 0, 0, 0.79);
+  font-size: 1.15em;
+  border-left: 2px solid black;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: black;
+  padding: 0.8em;
+  text-align: left;
+  height: 30px;
+  width: 100%;
+  padding: 0px;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.my-menu {
+  width: 100%;
+  overflow: hidden !important;
+  padding: 0px;
+}
+.my-menu:hover {
+  overflow: auto !important;
+}
+.bm-menu-wrap {
+  left: 0px !important;
+  width: 220px !important;
+  top: 0px !important;
+  background: url("../img/menu-wallpaper.jpg");
+  background-size: cover;
+  z-index: 1000 !important;
+}
+/*navbar styles *************************************************/
+.navbar-fixed {
+  position: fixed;
+  height: 105px;
+  z-index: 997;
+  margin-top: -50px;
+  background: #1010109e;
+}
+/*================= landing styles ==========================================*/
+.landing-btn-icon {
+  margin-right: 10px;
+  margin-top: 8px;
+}
+.landing-btn {
+  margin: 20px 20px;
+}
+.landing-background {
+  background: url("../img/image.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.landing-header {
+  padding: 120px 0 120px;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  text-shadow: 0.5px 0.5px 2px #000000;
+}
+/*================= card styles ==========================================*/
+.card-btn-fav {
+  position: absolute;
+  top: 0px;
+}
+.card-delete {
+  position: relative;
+  top: -249px;
+}
+#card-title {
+  display: block;
+  line-height: 19px;
+  font-size: 17px;
+  font-weight: bold;
+  width: 100% !important ;
+  border-bottom: 0.5px solid grey;
+}
+#card-content {
+  padding: 10px;
+  border-radius: 0 0 2px 2px;
+}
+.card-action {
+  color: #ffffff !important;
+}
+
+/*=============== ad page styles =================================*/
+
+.ad-background {
+  background: rgb(248, 247, 247);
+}
+/**************** gallery styles ***********************************/
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  font-size: 2em !important;
+}
+button:focus {
+  background: transparent !important;
+}
+.image-gallery-fullscreen-button::before,
+.image-gallery-play-button::before {
+  font-size: 1.7em !important;
+}
+
+.image-gallery-slide img {
+  width: 100%;
+  height: 270px;
+}
+
+/*=============== search styles ===================================*/
+.search-term {
+  border: 0.5px solid #388e3c !important;
+  padding: 0px 10px !important;
+  height: 35.5px !important;
+  position: relative;
+  top: -21px;
+  left: 11px;
+  border-right: none !important;
+  border-radius: 2px !important;
+}
+.search-advanced {
+  margin-top: -30px !important;
+  margin-left: 8px !important;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+}
+
+#search-advanced {
+  background: rgb(104, 102, 99);
+  border-radius: 5px;
+}
+/*=============== results styles ===================================*/
+.resault {
+  border: 1px #bdbdbd solid;
+  padding: 5px 0px;
+}
+.result-btn {
+  margin: 20px;
+  display: block !important;
+}
+.result-img {
+  max-height: 200px;
+}
+/*=============== dashboard styles ===================================*/
+.dashboard-header {
+  background: url("../img/dashboard.jpg");
+  height: 477px;
+  background-size: contain;
+  padding-top: 100px;
+  background-position-y: bottom;
+  background-attachment: fixed;
+}
+.dashboard-profile-pic {
+  width: 20%;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 160px;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 25px black;
+  box-shadow: 5px 5px 25px black;
+}
+.dashboard-address {
+  color: rgb(110, 109, 109);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 43px;
+  text-shadow: 0.5px 0.5px 2px black;
+}
+.dashboard-profile-btn {
+  height: 51px;
+  position: relative;
+  top: -26px;
+}
+
+.dashboard-unseen {
+  background: green;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: -16px;
+}
+
+.dashboard-conversation {
+  background: #a3d8f1;
+  padding-top: 5px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  box-shadow: 8px 5px 5px #070707;
+}
+
+.header-conversation-image {
+  width: 100%;
+  height: 150px;
+}
+
+.form {
+  color: #131313;
+  border: 2px solid;
+  box-shadow: 15px 10px 3px black;
+  background: #ffffff;
+  padding: 25px;
+}
+.clear-fix {
+  clear: both;
+}
+/*55*/
+
+/* =====================page footer =======================================*/
+
+.page-footer {
+  margin-top: -20px;
+}
+
+/* ========================== ad form =======================================*/
+
+.warning {
+  color: red;
+  background: transparent;
+  text-align: center;
+}
+
+.ad-form-background {
+  background: linear-gradient(
+    to bottom right,
+    rgb(64, 52, 204),
+    rgb(104, 90, 255)
+  );
+}
+
+.ad-form-content {
+  background: rgb(246, 248, 255);
+  padding: 10px;
+  box-shadow: 18px 18px 9px #000764;
+  border-radius: 5px;
+}
+
+/* ==========================comment ============================================*/
+
+.comments {
+  border: 0.5px solid rgb(221, 221, 221);
+  border-radius: 10px;
+  margin-top: 20px;
+  background: rgb(190, 189, 189);
+}
+
+.comment {
+  background: rgb(144, 239, 252);
+  margin-bottom: 5px;
+  padding: 10px;
+}
+.comment-content {
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+/*===================notifications styles ==============================*/
+.notificatio_sender {
+  margin-top: 0px;
+  color: #070707;
+  margin-left: -13px;
+  font-size: 23px;
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px 2px #060606;
+  font-variant: all-small-caps;
+}
+.notification_content {
+  font-size: 15px;
+  margin-top: -20px;
+}
