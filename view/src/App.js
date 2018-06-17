@@ -63,29 +63,29 @@ class App extends Component {
             />
             <Route path="/search" component={Search} exact={true} />
             <Route
-              path="/dashboard/personal_info"
+              path="/dashboard_personal_info"
               component={requiredLogin(PersonalInfo)}
             />
             <Route
-              path="/dashboard/advertises"
+              path="/dashboard_advertises"
               component={requiredLogin(UserAds)}
             />
             <Route
-              path="/dashboard/fav_ads"
+              path="/dashboard_fav_ads"
               component={requiredLogin(UserFavAds)}
             />
             <Route
-              path="/dashboard/messages/:_id"
+              path="/dashboard_messages"
               component={requiredLogin(UserMessages)}
             />
             <Route
-              path="/advertise/create/new"
+              path="/create_advertise"
               component={requiredLogin(CreateAdvertise)}
               exact={true}
             />
             <Route path="/advertise/:_id" component={Ad} exact={true} />
             <Route
-              path="/advertise/update/:_id"
+              path="/update_advertise/:_id"
               component={requiredLogin(UpdateAd)}
               exact={true}
             />

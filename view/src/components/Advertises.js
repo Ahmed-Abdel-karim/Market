@@ -107,10 +107,7 @@ class UserAds extends Component {
         <h3 className="underline">
           <span className="headings">{title}</span>
           {title === "Advertises" && (
-            <Link
-              className="btn-floating red hoverable"
-              to="/advertise/create/new"
-            >
+            <Link className="btn-floating red hoverable" to="/create_advertise">
               <i className="material-icons">add</i>
             </Link>
           )}

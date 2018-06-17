@@ -21,34 +21,34 @@ class Dashboard extends Component {
           <section className="dashboard-header">
             <img src={avatar} className="dashboard-profile-pic" alt="avatar" />
             <h1>{user.name}</h1>
-            <p className="center-align dashboard-address">
+            <div className="center-align dashboard-address">
               <h3>
                 <i className="small material-icons">location_on</i>{" "}
                 {user.address ? user.address : "unknown"}
               </h3>
-            </p>
+            </div>
             <div className="row container">
               <Link
                 className="btn col s12 m6 l3 dashboard-profile-btn purple lighten-2"
-                to={"/dashboard/personal_info"}
+                to={"/dashboard_personal_info"}
               >
-                <i className="material-icons left">account_box</i>profile
+                <i className="material-icons left">account_box</i>personal info
               </Link>
               <Link
                 className="btn col s12 m6 l3 dashboard-profile-btn indigo lighten-2 lighten-2"
-                to={"/dashboard/advertises"}
+                to={"/dashboard_advertises"}
               >
                 <i className="material-icons left">assignment</i>advertises
               </Link>
               <Link
                 className="btn col s12 m6 l3 dashboard-profile-btn grey darken-2 lighten-2"
-                to={"/dashboard/fav_ads"}
+                to={"/dashboard_fav_ads"}
               >
                 <i className="material-icons left">star</i>favorite ads
               </Link>
               <Link
                 className="btn col s12 m6 l3 dashboard-profile-btn orange lighten-2"
-                to={`/dashboard/messages/${user._id}`}
+                to={`/dashboard_messages`}
               >
                 <i className="material-icons left">message</i>messages
               </Link>

@@ -128,7 +128,7 @@ class Header extends Component {
               <Icon size={15} icon={logout} />
               <span className="header-label">Logout</span>
             </a>
-            <Link className="header-menu-item" to="/dashboard/personal_info">
+            <Link className="header-menu-item" to="/dashboard_personal_info">
               <Icon size={20} icon={dashboard} />
               <span className="header-label">Dashboard</span>
             </Link>

@@ -54,7 +54,7 @@ const Card = ({
           {user && (
             <Link
               className="deep-purple accent-3 btn-floating card-btn-fav hoverable"
-              to={`/advertise/update/${_id}`}
+              to={`/update_advertise/${_id}`}
             >
               <i className="material-icons">edit</i>
             </Link>
