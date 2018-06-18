@@ -69,7 +69,12 @@ module.exports = (params, _id) => {
   if (!params.skip) {
     params.skip = 0;
   }
-  sort[params.sortBy] = parseFloat(params.order);
+  if (params.sortBy === "relevance" && !!params.term) {
+    sort.score = { $meta: "textScore" };
+  } else {
+    sort[params.sortBy] = parseFloat(params.order);
+  }
+
   const query = QueryBuilder(
     params.term,
     params.category,

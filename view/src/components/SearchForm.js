@@ -68,8 +68,8 @@ class SearchForm extends Component {
         className: "col s12 m6",
         options: [
           {
-            label: "relevence",
-            value: "relevence"
+            label: "relevance",
+            value: "relevance"
           },
           {
             label: "price",
