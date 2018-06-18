@@ -59,7 +59,7 @@ and the back end API.
 8. if every thing is ok the server respond with a token , the client store this token in the local storage
 9. the user stay logged in until he logout or the token is expired then he has to login again
 10. if the user did not receive the varification message he can enter the email he used to makethis account and submit the form to resend the verification message
-11. if the user forget his password he submit his email to the server and the server send a message with a token to his email
+11. if the user forgot his password he submit his email to the server and the server send a message with a token to his email
 12. when the user receive the email and press on the link the browser redirect to the website with form to reset his password
 13. when the user logout the token is removed from local Storage and the user is redirected to the home page
 ### routes protection
