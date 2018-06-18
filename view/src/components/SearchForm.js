@@ -171,7 +171,7 @@ class SearchForm extends Component {
         <div id="search-advanced" className="col s12 row">
           {this.state.advanced && this.renderAdvanced()}
           {this.state.advanced && (
-            <button className="col s12 btn submit" type="submit">
+            <button className="col s12 btn submit green darken-2" type="submit">
               Submit
             </button>
           )}
