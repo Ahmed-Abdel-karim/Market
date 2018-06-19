@@ -15,7 +15,7 @@ class UserAds extends Component {
     };
   }
   componentWillMount() {
-    if (this.props.title === "Advertises") {
+    if (this.props.title === "Ads") {
       this.props.fetchUserAds((this.state.activePage - 1) * 12);
     } else if (this.props.title === "Favorite Ads") {
       this.props.fetchFavAds((this.state.activePage - 1) * 12);
@@ -81,8 +81,8 @@ class UserAds extends Component {
                   createdAt={ad.createdAt}
                   key={ad._id}
                   _id={ad._id}
-                  fav={this.props.title === "Advertises" ? null : false}
-                  user={this.props.title === "Advertises" ? true : false}
+                  fav={this.props.title === "Ads" ? null : false}
+                  user={this.props.title === "Ads" ? true : false}
                   price={ad.price}
                   category={ad.category}
                   deleteAd={this.props.deleteAd}
@@ -106,8 +106,8 @@ class UserAds extends Component {
       <div className="row container">
         <h3 className="underline">
           <span className="headings">{title}</span>
-          {title === "Advertises" && (
-            <Link className="btn-floating red hoverable" to="/create_advertise">
+          {title === "Ads" && (
+            <Link className="btn-floating red hoverable" to="/create_ad">
               <i className="material-icons">add</i>
             </Link>
           )}

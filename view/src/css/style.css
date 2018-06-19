@@ -277,6 +277,12 @@ a:hover {
   text-shadow: 0.5px 0.5px 2px #000000;
 }
 /*================= card styles ==========================================*/
+
+.card {
+  height: 450px;
+  overflow: hidden;
+}
+
 .card-btn-fav {
   position: absolute;
   top: 0px;

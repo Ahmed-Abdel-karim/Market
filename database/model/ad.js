@@ -14,7 +14,7 @@ const PointSchema = new Schema({
   }
 });
 
-const AdvertiseSchema = new Schema({
+const AdSchema = new Schema({
   title: {
     type: String
   },
@@ -55,12 +55,12 @@ const AdvertiseSchema = new Schema({
   }
 });
 
-AdvertiseSchema.pre("remove", function(next) {
+AdSchema.pre("remove", function(next) {
   const Comment = mongoose.model("comment");
   Comment.remove({ _id: { $in: this.comments } }).then(() => next());
   const User = mongoose.model("user");
 });
-AdvertiseSchema.index(
+AdSchema.index(
   {
     title: "text",
     description: "text",
@@ -78,5 +78,5 @@ AdvertiseSchema.index(
   }
 );
 
-const Advertise = mongoose.model("advertise", AdvertiseSchema);
-module.exports = Advertise;
+const Ad = mongoose.model("Ad", AdSchema);
+module.exports = Ad;

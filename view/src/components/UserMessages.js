@@ -20,36 +20,40 @@ class UserMessages extends Component {
 
   renderContent() {
     if (this.props.userConversations && this.props.user) {
-      const { user } = this.props;
-      return this.props.userConversations.map(conv => {
-        const { participants, _id, updatedAt, messages } = conv;
-        const friend =
-          participants[0]._id === user._id ? participants[1] : participants[0];
-        const friend_id = friend._id;
-        const avatar = friend.avatar ? `/api/img/${friend.avatar}` : photo;
-        return (
-          <div
-            className="col s12 m3 "
-            onClick={() => this.sendMessage(friend_id)}
-            key={_id}
-          >
-            <div className="col s12 dashboard-conversation">
-              <div>
-                <img
-                  className="header-conversation-image"
-                  src={avatar}
-                  alt={friend.name}
-                />
-                <h3>{friend.name}</h3>
+      if (this.props.userConversations.length > 0) {
+        const { user } = this.props;
+        return this.props.userConversations.map(conv => {
+          const { participants, _id, updatedAt, messages } = conv;
+          const friend =
+            participants[0]._id === user._id
+              ? participants[1]
+              : participants[0];
+          const friend_id = friend._id;
+          const avatar = friend.avatar ? `/api/img/${friend.avatar}` : photo;
+          return (
+            <div
+              className="col s12 m3 "
+              onClick={() => this.sendMessage(friend_id)}
+              key={_id}
+            >
+              <div className="col s12 dashboard-conversation">
+                <div>
+                  <img
+                    className="header-conversation-image"
+                    src={avatar}
+                    alt={friend.name}
+                  />
+                  <h3>{friend.name}</h3>
+                </div>
+                <p className="dashboard-unseen center-align">
+                  {messages.length} New Messages
+                </p>
+                <p>Last Update : {moment(updatedAt).format("LLL")}</p>
               </div>
-              <p className="dashboard-unseen center-align">
-                {messages.length} New Messages
-              </p>
-              <p>Last Update : {moment(updatedAt).format("LLL")}</p>
             </div>
-          </div>
-        );
-      });
+          );
+        });
+      }
     } else {
       return (
         <div className="progress ">

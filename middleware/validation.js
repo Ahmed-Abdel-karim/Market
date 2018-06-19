@@ -69,7 +69,8 @@ const register = (req, res, next) => {
   }
 };
 
-const resetPassword = (req, res, next) => {[]
+const resetPassword = (req, res, next) => {
+  [];
   if (!!req.body.password && !!req.body.confirmPassword) {
     const { password, confirmPassword, token } = req.body;
     if (!password) {
@@ -140,7 +141,7 @@ const login = (req, res, next) => {
   }
 };
 
-const advertise = (req, res, next) => {
+const ad = (req, res, next) => {
   const params = req.body;
   const error = term =>
     res.status(400).json({
@@ -192,4 +193,4 @@ const updateUser = (req, res, next) => {
   next();
 };
 
-module.exports = { register, login, advertise, updateUser, resetPassword };
+module.exports = { register, login, ad, updateUser, resetPassword };

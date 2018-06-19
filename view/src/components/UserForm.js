@@ -188,11 +188,17 @@ class UserForm extends Component {
   }
 }
 
+const mapSatetToProbs = state => {
+  return {
+    errors: state.flashMessage
+  };
+};
+
 UserForm = reduxForm({
   form: "user"
 })(UserForm);
 
 export default connect(
-  null,
+  mapSatetToProbs,
   actions
 )(UserForm);

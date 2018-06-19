@@ -22,6 +22,12 @@ class AdForm extends Component {
     };
   }
 
+  componentDidMount() {
+    if (this.props.create) {
+      this.props.resetReducer();
+    }
+  }
+
   changeCountry(val) {
     this.setState({
       country: val
@@ -147,7 +153,7 @@ class AdForm extends Component {
     if (!!this.props.createOrUpdateAd) {
       const { _id } = this.props.createOrUpdateAd;
       if (this.state.redirect) {
-        return <Redirect to={`/advertise/${_id}`} />;
+        return <Redirect to={`/ad/${_id}`} />;
       }
     }
     return (
@@ -157,7 +163,7 @@ class AdForm extends Component {
           className="container row form"
         >
           <h1 className="center-align">
-            {this.props.create ? "Create Advertise" : "Update Advertise"}
+            {this.props.create ? "Create Ad" : "Update Ad"}
           </h1>
           {this.renderContent()}
           {this.renderSubmit()}
@@ -203,7 +209,7 @@ AdForm = reduxForm({
 const mapSatetToProbs = state => {
   return {
     createOrUpdateAd: state.createOrUpdateAd,
-    errors: state.error
+    errors: state.flashMessage
   };
 };
 

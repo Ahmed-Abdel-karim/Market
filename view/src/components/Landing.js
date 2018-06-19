@@ -27,7 +27,7 @@ class Landing extends Component {
   renderLogin() {
     if (!!this.props.user) {
       return (
-        <Link to="/create_advertise" className="btn landing-btn">
+        <Link to="/create_ad" className="btn landing-btn">
           <Icon size={13} icon={plus} className="landing-btn-icon" />
           Place Ad
         </Link>

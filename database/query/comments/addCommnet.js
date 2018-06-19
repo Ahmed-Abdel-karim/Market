@@ -1,7 +1,7 @@
 const User = require("../../model/user");
 const Comment = require("../../model/comment");
-const Advertise = require("../../model/advertise");
-const findAdQuery = require("../../query/advertise/findAds");
+const Ad = require("../../model/ad");
+const findAdQuery = require("../../query/ad/findAds");
 
 const addCommnetQuery = (comment, ad, user) => {
   const newComment = new Comment({

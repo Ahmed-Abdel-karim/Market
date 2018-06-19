@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const validator = require("email-validator");
-const bcrypt = require("bcrypt-nodejs");
-
 const PointSchema = new Schema({
   type: {
     type: String,
@@ -33,7 +31,7 @@ const UserSchema = new Schema({
   region: String,
   country: String,
   gender: String,
-  advertises: [
+  ads: [
     {
       type: Schema.Types.ObjectId,
       ref: "advertise"

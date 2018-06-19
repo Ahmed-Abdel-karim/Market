@@ -1,21 +1,21 @@
-const Advertise = require("../../model/advertise");
+const Ad = require("../../model/ad");
 
 const currentUserAds = (user, skip, type) => {
   if (type === "Fav") {
     return Promise.all([
-      Advertise.find({ _id: { $in: user.favAds } })
+      Ad.find({ _id: { $in: user.favAds } })
         .sort({ createdAt: -1 })
         .skip(skip)
         .limit(12),
-      Advertise.find({ _id: { $in: user.favAds } }).count()
+      Ad.find({ _id: { $in: user.favAds } }).count()
     ]);
   }
   return Promise.all([
-    Advertise.find({ user: user._id })
+    Ad.find({ user: user._id })
       .sort({ createdAt: -1 })
       .skip(skip)
       .limit(12),
-    Advertise.find({ user: user._id }).count()
+    Ad.find({ user: user._id }).count()
   ]);
 };
 

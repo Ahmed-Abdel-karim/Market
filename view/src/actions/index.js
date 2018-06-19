@@ -321,7 +321,7 @@ export const updateUser = values => {
           type: "FETCH_USER",
           payload: res.data
         });
-        window.location.replace("/dashboard/personal_info");
+        window.location.replace("/dashboar_personal_info");
       })
       .catch(e =>
         dispatch({
@@ -356,7 +356,7 @@ export const fetchAds = (values, _id) => {
   if (_id) {
     return dispatch => {
       axios
-        .get(`/api/advertise/${_id}`)
+        .get(`/api/ad/${_id}`)
         .then(res => {
           res.data.tags = res.data.tags.map(tag => {
             return {
@@ -378,7 +378,7 @@ export const fetchAds = (values, _id) => {
         });
     };
   }
-  let url = "/api/advertise?";
+  let url = "/api/ad?";
   const params = [
     {
       param: "sortBy",
@@ -445,7 +445,7 @@ export const fetchAds = (values, _id) => {
 export const fetchUserAds = skip => {
   return dispatch => {
     axios
-      .get(`/api/current_user/advertises?skip=${skip}`)
+      .get(`/api/current_user/ads?skip=${skip}`)
       .then(res =>
         dispatch({
           type: "SEARCH_ADS",
@@ -464,7 +464,7 @@ export const fetchUserAds = skip => {
 export const fetchFavAds = skip => {
   return dispatch => {
     axios
-      .get(`/api/current_user/advertises?skip=${skip}&type=Fav`)
+      .get(`/api/current_user/ads?skip=${skip}&type=Fav`)
       .then(res =>
         dispatch({
           type: "SEARCH_ADS",
@@ -511,7 +511,7 @@ export const createAd = values => {
   return dispatch => {
     axios({
       method: "post",
-      url: "/api/advertise",
+      url: "/api/ad",
       data: values
     })
       .then(res =>
@@ -533,7 +533,7 @@ export const updateAd = (values, _id) => {
   return dispatch => {
     axios({
       method: "put",
-      url: `/api/advertise/${_id}`,
+      url: `/api/ad/${_id}`,
       data: values
     })
       .then(res => {
@@ -555,7 +555,7 @@ export const deleteAd = _id => {
   return dispatch => {
     axios({
       method: "delete",
-      url: `/api/advertise/${_id}`
+      url: `/api/ad/${_id}`
     })
       .then(res => dispatch({ type: "DELETE_AD", payload: res.data }))
       .catch(e =>
@@ -568,7 +568,7 @@ export const deleteAd = _id => {
 };
 
 export const searchAds = values => {
-  let url = "/api/advertise?";
+  let url = "/api/ad?";
   const params = [
     {
       param: "sortBy",

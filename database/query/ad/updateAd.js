@@ -1,4 +1,4 @@
-const Advertise = require("../../model/advertise");
+const Ad = require("../../model/ad");
 const findAdQuery = require("./findAds");
 const ImagesQuery = require("../images/index");
 

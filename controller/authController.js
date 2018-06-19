@@ -32,7 +32,7 @@ const register = (req, res, next) => {
             html: `<div>
               <h1 style={text-align:center}>Verify your email to sign up for MARKET<h1>
                <p>To complete the signup process, please click on the link below</p>
-                <a href="https://pacific-lake-47000.herokuapp.com/verification/${
+                <a href="https://market9.herokuapp.com/verification/${
                   token.token
                 }">Click</a></div>`
           };
@@ -119,7 +119,7 @@ const resendVerification = (req, res, next) => {
               html: `<div>
                 <h1 style={text-align:center}>Verify your email to sign up for MARKET<h1>
                  <p>To complete the signup process, please click on the link below</p>
-                  <a href="https://pacific-lake-47000.herokuapp.com/verification/${
+                  <a href="https://market9.herokuapp.com/verification/${
                     token.token
                   }">Click</a></div>`
             };
@@ -172,7 +172,7 @@ const reqResetPassword = (req, res, next) => {
               html: `<div>
                   <h1 style={text-align:center}>Reset Password Link<h1>
                    <p>To Reset Your Password, please click on the link below</p>
-                    <a href="https://pacific-lake-47000.herokuapp.com/reset_password/${
+                    <a href="https://market9.herokuapp.com/reset_password/${
                       token.token
                     }">Click</a></div>`
             };

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Advertises from "./Advertises";
+import Ads from "./Ads";
 import Dashboard from "./Dashboard";
 class UserFavAds extends Component {
   render() {
     return (
       <div>
         <Dashboard />
-        <Advertises title="Favorite Ads" />
+        <Ads title="Favorite Ads" />
       </div>
     );
   }

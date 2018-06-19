@@ -9,7 +9,7 @@ import Ad from "./components/Ad";
 import "react-image-gallery/styles/css/image-gallery.css";
 import "react-select/dist/react-select.css";
 import "../src/css/style.css";
-import CreateAdvertise from "./components/CreateAdvertise";
+import CreateAd from "./components/CreateAd";
 import UpdateAd from "./components/UpdateAd";
 import EditUser from "./components/EditUser";
 import PersonalInfo from "./components/PersonalInfo";
@@ -66,10 +66,7 @@ class App extends Component {
               path="/dashboard_personal_info"
               component={requiredLogin(PersonalInfo)}
             />
-            <Route
-              path="/dashboard_advertises"
-              component={requiredLogin(UserAds)}
-            />
+            <Route path="/dashboard_ads" component={requiredLogin(UserAds)} />
             <Route
               path="/dashboard_fav_ads"
               component={requiredLogin(UserFavAds)}
@@ -79,13 +76,13 @@ class App extends Component {
               component={requiredLogin(UserMessages)}
             />
             <Route
-              path="/create_advertise"
-              component={requiredLogin(CreateAdvertise)}
+              path="/create_ad"
+              component={requiredLogin(CreateAd)}
               exact={true}
             />
-            <Route path="/advertise/:_id" component={Ad} exact={true} />
+            <Route path="/ad/:_id" component={Ad} exact={true} />
             <Route
-              path="/update_advertise/:_id"
+              path="/update_ad/:_id"
               component={requiredLogin(UpdateAd)}
               exact={true}
             />

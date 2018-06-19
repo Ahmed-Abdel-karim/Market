@@ -4,7 +4,7 @@ const createOrUpdateAdReducer = (state = null, action) => {
       return action.payload || false;
     case "UPDATE_AD":
       return action.payload || false;
-    case "RESET":
+    case "RESET_ADS":
       return action.payload;
     default:
       return state;

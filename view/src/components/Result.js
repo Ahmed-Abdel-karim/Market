@@ -44,10 +44,7 @@ const Result = ({ ad, addToFav, fav, removeFromFav }) => {
           </div>
         )}
         <div className="col s6 m12">
-          <Link
-            to={`/advertise/${ad._id}`}
-            className="btn btn-floating result-btn"
-          >
+          <Link to={`/ad/${ad._id}`} className="btn btn-floating result-btn">
             <i className="material-icons">more_vert</i>
           </Link>
         </div>

@@ -3,7 +3,7 @@ const socket = require("socket.io");
 const port = process.env.PORT || 5000;
 const server = app.listen(port, console.log(`listining on port ${port}`));
 const addCommentQuery = require("./database/query/comments/addCommnet");
-const findAdsQuery = require("./database/query/advertise/findAds");
+const findAdsQuery = require("./database/query/ad/findAds");
 const findUserQuery = require("./database/query/user/findUser");
 const findOrCreateConvQuery = require("./database/query/conversation/findOrCreate");
 const recieveMessageQuery = require("./database/query/messages/recieveMessage");
@@ -15,9 +15,9 @@ const io = socket(server);
 io.on("connection", socket => {
   socket.on("commentList", _id => {
     if (validator.isMongoId(_id)) {
-      findAdsQuery(null, _id).then(advertise => {
-        if (!!advertise) {
-          const { comments } = advertise;
+      findAdsQuery(null, _id).then(ad => {
+        if (!!ad) {
+          const { comments } = ad;
           socket.emit("commentList", comments);
         }
       });
@@ -27,8 +27,8 @@ io.on("connection", socket => {
   socket.on("comment", ({ comment, ad_id, user_id }) => {
     Promise.all([findAdsQuery(null, ad_id), findUserQuery(user_id)])
       .then(res => addCommentQuery(comment, res[0], res[1]))
-      .then(advertise => {
-        const { comments } = advertise;
+      .then(ad => {
+        const { comments } = ad;
         io.emit("comment", { ad_id, comments });
       })
       .catch(e => console.log(e));

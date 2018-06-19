@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Advertises from "./Advertises";
+import Ads from "./Ads";
 import Dashboard from "./Dashboard";
 
 class UserAds extends Component {
@@ -7,7 +7,7 @@ class UserAds extends Component {
     return (
       <div>
         <Dashboard />
-        <Advertises title={"Advertises"} />
+        <Ads title={"Ads"} />
       </div>
     );
   }

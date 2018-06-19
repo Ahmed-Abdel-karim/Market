@@ -1,4 +1,4 @@
-const Advertise = require("../../model/advertise");
+const Ad = require("../../model/ad");
 const User = require("../../model/user");
 
 const removeFromFav = (user, _id) => {

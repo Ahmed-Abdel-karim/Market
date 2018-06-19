@@ -1,12 +1,12 @@
-const createAdQuery = require("../database/query/advertise/createAd");
-const findAdsQuery = require("../database/query/advertise/findAds");
-const updateAdQuery = require("../database/query/advertise/updateAd");
+const createAdQuery = require("../database/query/ad/createAd");
+const findAdsQuery = require("../database/query/ad/findAds");
+const updateAdQuery = require("../database/query/ad/updateAd");
 const findUserQuery = require("../database/query/user/findUser");
 const imagesQuery = require("../database/query/images/index");
-const deleteAdQuery = require("../database/query/advertise/deleteAd");
+const deleteAdQuery = require("../database/query/ad/deleteAd");
 const updateUserQuery = require("../database/query/user/updateUser");
-const addtofavQuery = require("../database/query/advertise/favAd");
-const removeFavQuery = require("../database/query/advertise/removeFromFav");
+const addtofavQuery = require("../database/query/ad/favAd");
+const removeFavQuery = require("../database/query/ad/removeFromFav");
 const currentUserAdsQuery = require("../database/query/user/currentUserAds");
 const findUserConvQuery = require("../database/query/conversation/findUserConv");
 const updateMessagesQuery = require("../database/query/messages/updateMessages");
@@ -58,14 +58,14 @@ const findAds = (req, res, next) => {
             res.json(ads);
           } else {
             res.status(404).json({
-              message: "advertise is either deleted or not found"
+              message: "ad is either deleted or not found"
             });
           }
         })
         .catch(next);
     } else {
       res.status(404).json({
-        message: "advertise is either deleted or not found"
+        message: "ad is either deleted or not found"
       });
     }
   } else {

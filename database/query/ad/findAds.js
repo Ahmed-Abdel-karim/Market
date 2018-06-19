@@ -1,4 +1,4 @@
-const Advertise = require("../../model/advertise");
+const Ad = require("../../model/ad");
 
 const QueryBuilder = (term, category, priceFrom, priceTo, country, region) => {
   let query = [];
@@ -46,7 +46,7 @@ const QueryBuilder = (term, category, priceFrom, priceTo, country, region) => {
 
 module.exports = (params, _id) => {
   if (_id) {
-    return Advertise.findById(_id)
+    return Ad.findById(_id)
       .populate({
         path: "comments",
         populate: {
@@ -85,18 +85,18 @@ module.exports = (params, _id) => {
   );
   if (query.length > 0) {
     return Promise.all([
-      Advertise.find({ $and: query }, { score: { $meta: "textScore" } })
+      Ad.find({ $and: query }, { score: { $meta: "textScore" } })
         .sort(sort)
         .skip(parseFloat(params.skip))
         .limit(12),
-      Advertise.find({ $and: query }, { score: { $meta: "textScore" } }).count()
+      Ad.find({ $and: query }, { score: { $meta: "textScore" } }).count()
     ]);
   }
   return Promise.all([
-    Advertise.find()
+    Ad.find()
       .sort(sort)
       .skip(parseFloat(params.skip))
       .limit(12),
-    Advertise.count()
+    Ad.count()
   ]);
 };

@@ -134,7 +134,7 @@ class Ad extends Component {
           </div>
         );
       case false:
-        return <p>Error Advertise is either deleted or not found</p>;
+        return <p>Error ad is either deleted or not found</p>;
       default:
         if (this.props.ad.title === undefined) {
           return (

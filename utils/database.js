@@ -1,6 +1,6 @@
 const keys = require("../configue/keys");
 const mongoose = require("mongoose");
-const Advertise = require("../database/model/advertise");
+const Ad = require("../database/model/ad");
 mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongodbURL);
 let gridfs;

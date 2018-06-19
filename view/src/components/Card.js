@@ -54,7 +54,7 @@ const Card = ({
           {user && (
             <Link
               className="deep-purple accent-3 btn-floating card-btn-fav hoverable"
-              to={`/update_advertise/${_id}`}
+              to={`/update_ad/${_id}`}
             >
               <i className="material-icons">edit</i>
             </Link>
@@ -66,13 +66,16 @@ const Card = ({
               {title.slice(0, 20)}
               {title.length > 20 && <span> ...</span>}
             </p>
-            <p>category:{category}</p>
+            <p>
+              category:{category.slice(0, 20)}
+              {category.length > 20 && <span> ...</span>}
+            </p>
             {moment(createdAt).format("LLL")}
           </div>
           <p className="price center-align">{price}$</p>
         </div>
         <div className="card-action">
-          <Link to={`/advertise/${_id}`} className="btn hoverable">
+          <Link to={`/ad/${_id}`} className="btn hoverable">
             More
           </Link>
         </div>

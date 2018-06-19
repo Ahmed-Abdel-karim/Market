@@ -11,7 +11,7 @@ import { SocketProvider } from "socket.io-react";
 import io from "socket.io-client";
 
 const store = createStore(reducer, {}, applyMiddleware(reduxThunk));
-const socket = io.connect("https://pacific-lake-47000.herokuapp.com/");
+const socket = io.connect("https://market9.herokuapp.com/");
 
 ReactDOM.render(
   <Provider store={store}>

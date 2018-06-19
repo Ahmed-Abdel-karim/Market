@@ -1,10 +1,10 @@
 const User = require("../../model/user");
 const Message = require("../../model/message");
-const Advertise = require("../../model/advertise");
+const Ad = require("../../model/ad");
 const Comment = require("../../model/comment");
 const Conversatio = require("../../model/conversation");
 const createAdQuery = (user, params, images) => {
-  const newAd = new Advertise({
+  const newAd = new Ad({
     title: params.title,
     price: params.price,
     description: params.description,
@@ -22,7 +22,7 @@ const createAdQuery = (user, params, images) => {
     region: params.region,
     createdAt: Date.now()
   });
-  user.advertises.push(newAd);
+  user.ads.push(newAd);
   newAd.user = user;
   images.forEach(img => {
     newAd.gallery.push(img.id);

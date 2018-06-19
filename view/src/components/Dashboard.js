@@ -36,9 +36,9 @@ class Dashboard extends Component {
               </Link>
               <Link
                 className="btn col s12 m6 l3 dashboard-profile-btn indigo lighten-2 lighten-2"
-                to={"/dashboard_advertises"}
+                to={"/dashboard_ads"}
               >
-                <i className="material-icons left">assignment</i>advertises
+                <i className="material-icons left">assignment</i>ads
               </Link>
               <Link
                 className="btn col s12 m6 l3 dashboard-profile-btn grey darken-2 lighten-2"

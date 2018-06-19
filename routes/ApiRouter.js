@@ -6,26 +6,26 @@ const passport = require("passport");
 const authentication = passport.authenticate("jwt", { session: false });
 const validation = require("../middleware/validation");
 /********************************************************* */
-/* Advertise routes*/
-apiRouter.get("/advertise", apiController.findAds);
-apiRouter.get("/advertise/:_id", apiController.findAds);
+/* ad routes*/
+apiRouter.get("/ad", apiController.findAds);
+apiRouter.get("/ad/:_id", apiController.findAds);
 apiRouter.post(
-  "/advertise",
+  "/ad",
   authentication,
   upload.array("images", 3),
-  validation.advertise,
+  validation.ad,
   apiController.createAd
 );
 apiRouter.post("/fav", authentication, apiController.addToFav);
 apiRouter.delete("/fav/:_id", authentication, apiController.removeFromFav);
 apiRouter.put(
-  "/advertise/:_id",
+  "/ad/:_id",
   authentication,
   upload.array("images", 3),
-  validation.advertise,
+  validation.ad,
   apiController.updateAd
 );
-apiRouter.delete("/advertise/:_id", authentication, apiController.deleteAd);
+apiRouter.delete("/ad/:_id", authentication, apiController.deleteAd);
 apiRouter.get("/img/:_id", apiController.readimage);
 /******************************************************************* */
 /* user routes */
@@ -38,7 +38,7 @@ apiRouter.put(
   apiController.updateUser
 );
 apiRouter.get(
-  "/current_user/advertises",
+  "/current_user/ads",
   authentication,
   apiController.currentUserAds
 );
