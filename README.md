@@ -4,7 +4,7 @@ Mraket is a free fictitious platform for buying and selling services and goods s
 [visit the website here](https://market9.herokuapp.com)
 ## Purpose:
 the purpose of this web application is to showcase my coding skills , i did not put so much efforts
-into design and front-end fancy stuff like animations , i just fouced in connecting react with redux 
+into design and front-end fancy stuff like animations , i just focused in connecting react with redux 
 and the back end API.
 
 ## Tech-stack
